@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NIMROD CHEAT - Landing Page</title>
+  <style>
+    body {
+      margin: 0;
+      background: #0f0f0f;
+      font-family: Arial, sans-serif;
+      color: #fff;
+      text-align: center;
+      padding-bottom: 50px;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://cdn.jsdelivr.net/gh/JulianLaval/canvas-particles@master/demo/media/overlay.png') repeat;
+      opacity: 0.05;
+      z-index: -1;
+    }
+
+    .logo {
+      margin: 40px auto 10px;
+      width: 160px;
+      animation: pulse 3s infinite;
+    }
+
+    h1 {
+      font-size: 28px;
+      color: #00eaff;
+      margin-bottom: 30px;
+      text-shadow: 0 0 10px #00eaffaa;
+      animation: fadeInUp 1s ease-out;
+    }
+
+    .link-box {
+      background: linear-gradient(90deg, #00eaff, #00eaff);
+      color: #1a1a1a;
+      margin: 15px auto;
+      padding: 18px 22px;
+      width: 280px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 18px;
+      transition: 0.3s;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    .link-box:hover {
+      background: linear-gradient(90deg, #00eaff, #6a00ff);
+      transform: scale(1.03);
+    }
+
+    .icon {
+      font-size: 28px;
+      color: #1a1a1a;
+    }
+
+    .text {
+      text-align: right;
+    }
+
+    .text strong {
+      display: block;
+      font-size: 17px;
+    }
+
+    .text span {
+      font-size: 14px;
+      color: #333;
+    }
+
+    .copy-btn {
+      background: none;
+      border: none;
+      color: #00eaff;
+      font-size: 14px;
+      margin-top: 5px;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    .copy-btn:hover {
+      color: #fff;
+    }
+
+    .copy-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .download-box {
+      margin-top: 30px;
+      animation: fadeInUp 1s ease forwards;
+    }
+
+    .download-btn {
+      background: linear-gradient(90deg, #00eaff, #00eaff);
+      color: #1a1a1a;
+      padding: 14px 28px;
+      font-size: 16px;
+      border: none;
+      border-radius: 14px;
+      cursor: pointer;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
+      transition: 0.3s;
+    }
+
+    .download-btn:hover {
+      background: linear-gradient(90deg, #00eaff, #6a00ff);
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeInDown {
+      0% { opacity: 0; transform: translateY(-20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.05); opacity: 0.9; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+  </style>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <img src="your-animated-logo.gif.gif" alt="DarkNess CHEAT Animated Logo" class="logo">
+  <h1>DarkNess  CHEAT</h1>
+
+  <div class="copy-container">
+    <a class="link-box" href="https://discord.gg/g2XQHdadUv" target="_blank">
+      <i class="fab fa-discord icon"></i>
+      <div class="text">
+        <strong>DISCORD</strong>
+        <span>ديسكورد</span>
+      </div>
+    </a>
+    <button class="copy-btn" onclick="copyToClipboard('https://discord.gg/g2XQHdadUv')">نسخ الرابط</button>
+  </div>
+
+  <div class="copy-container">
+    <a class="link-box" href="https://t.me/DarkNaessCheat" target="_blank">
+      <i class="fab fa-telegram icon"></i>
+      <div class="text">
+        <strong>TELEGRAM</strong>
+        <span>تليجرام</span>
+      </div>
+    </a>
+    <button class="copy-btn" onclick="copyToClipboard('https://t.me/DarkNaessCheat')">نسخ الرابط</button>
+  </div>
+
+  <div class="download-box">
+    <a href="https://github.com/Nimrod60/DarkNess-Tool/raw/refs/heads/main/DarkNess-Tools.exe" download>
+      <button class="download-btn">
+        <i class="fas fa-download"></i> DarkNess Tools
+      </button>
+    </a>
+  </div>
+
+  <script>
+    function copyToClipboard(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        alert("تم نسخ الرابط بنجاح!");
+      });
+    }
+  </script>
+</body>
+</html>
